@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Никита Модылин](https://up.htmlacademy.ru/htmlcss/24/user/845257).
-* Наставник: `Неизвестно`.
+* Наставник: [Влад Кривокора](https://htmlacademy.ru/profile/krivokora).
 
 ---
 
