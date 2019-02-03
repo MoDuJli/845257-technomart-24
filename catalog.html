@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <title>Каталог товаров в Техномарте</title>
@@ -8,7 +8,9 @@
     <header class="main-header">
       <div class="header-first-lvl">
         <a href="/index.html" class="header-logo">Логотип Техномарта</a>  
-        <span class="search">Поиск:</span>
+        <form>
+          <input type="search" name="search" class="search" placeholder="Поиск">
+        </form>
         <a href="#" class="bookmarks">Закладки:0</a>
         <a href="#" class="basket basket-active">Корзина:10</a>
         <a href="#" class="make-an-order make-an-order-active">Оформить заказ</a>
@@ -22,9 +24,9 @@
           <address class="header-address">г.Санкт-Петербург,ул.Б.Конюшенная,д.19/8</address>
         </div>
         <p>
-          <span class="user-name">Равшан Джамшутович</span> 
-          <span><a href="#" class="orders">Мои заказы</a></span>
-          <span><a href="#" class="personal-account">Личный кабинет</a></span>
+          <span class="user-name"><a href="#">Равшан Джамшутович</a> <a href="#">Деавторизация</a></span> 
+          <a href="#" class="orders">Мои заказы</a>
+          <a href="#" class="personal-account">Личный кабинет</a>
         </p>
       </div>
       <nav class="main-navigation">
@@ -42,26 +44,55 @@
     <main>
       <section>
       <ul class="breadcrumbs">
-        <li><a href="/index.html"></a></li>
-        <li><a href="/catalog.html"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
+        <li><a href="/index.html">Главная</a></li>
+        <li><a href="/catalog.html">Каталог</a></li>
+        <li><a href="#">Инструмент</a></li>
+        <li><a href="#">Перфораторы</a></li>
       </ul>
       <h2>Перфораторы</h2>  
       <section class="filters">
         <h3>Фильтр:</h3> 
-        <div class="first-filter">
-          <!--форма-->
-        </div>   
-        <div class="second-filter">
-           
-        </div>
-        <div class="thirs-filter">
-
-        </div>
-        <!--форма-->
+        <form>
+          <fieldset class="price-filter">
+            <legend>Цена:</legend>
+              <input type="range" min="0" max="30000" name="price">
+              <!-- 0-3000 -->
+          </fieldset>   
+          <fieldset class="company-filter">
+            <legend>Производители:</legend>
+              <input type="checkbox" name="BOSCH" id="filter-Interskol" checked> 
+              <label for="filter-BOSCH">Bosch</label>
+              <input type="checkbox" name="Interskol" id="filter-Interskol"> 
+              <label for="filter-INTERSKOL">Интерскол</label>
+              <input type="checkbox" name="Makita" id="filter-Makita" checked> 
+              <label for="filter-Makita">Makita</label>
+              <input type="checkbox" name="Dewalt" id="filter-Dewalt"> 
+              <label for="filter-Dewalt">Dewalt</label>
+              <input type="checkbox" name="Hitachi" id="filter-Hitachi"> 
+              <label for="filter-Hitachi">Hitachi</label>
+          </fieldset>
+          <fieldset class="charge-filter">
+            <legend>Питание:</legend>
+              <input type="radio" name="accumulator" id="filter-accumulator" checked> 
+              <label for="filter-accumulator">Аккумуляторные</label>
+              <input type="radio" name="line-supply" id="filter-line-supply" > 
+              <label for="filter-line-supply">Сетевые</label>
+          </fieldset>
+          <button type="submit" value="Показать"></button>
+        </form>
       </section>
-      <!--сортировка-->
+      <section class="assortment">
+        <h3>Сортировка:</h3>
+        <ul class="assortment-list">
+          <li class="active">По цене</li>  
+          <li>По типу</li>  
+          <li>По функционалу</li>  
+        </ul>
+        <ul>
+          <li>От большего к меньшему</li>
+          <li>От меньшего к большему</li>
+        </ul>
+      </section>
       <section class="first-column">
         <ul class="popular-item-list">
           <li>
@@ -197,5 +228,10 @@
     <p class="feedback">Обратная связь: <a href="#">mail@htmlacademy.ru</a></p>
     <p class="site-developer">Разработано - <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
     </footer>
+    <section class="modal-added-in-basket">
+      <p>Товар добавлен в корзину!</p>
+      <a href="#">Оформить заказ</a>
+      <a href="/catalog.html">Продолжить покупки</a>
+    </section>
   </body>
 </html>
