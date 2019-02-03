@@ -8,7 +8,7 @@
     <header class="main-header">
       <div class="header-first-lvl">
         <a href="#" class="header-logo">Логотип Техномарта</a>  
-        <form>
+        <form action="https://echo.htmlacademy.ru" method="get">
           <input type="search" name="search" class="search" placeholder="Поиск">
         </form>
         <a href="#" class="bookmarks">Закладки:0</a>
@@ -24,15 +24,15 @@
           <address class="header-address">г.Санкт-Петербург,ул.Б.Конюшенная,д.19/8</address>
         </div> 
         <ul>
-          <li><a href="/modal-log-in.html" class="to-log-in">Войти</a></li>
-          <li><a href="/modal-sign-in.html" class="to-sign-in">Регистрация</a></li>
+          <li><a href="modal-log-in.html" class="to-log-in">Войти</a></li>
+          <li><a href="modal-sign-in.html" class="to-sign-in">Регистрация</a></li>
         </ul>
       </div>
       <nav class="main-navigation">
         <ul class="site-nagigation">
           <li><a href="#">Главная</a></li>
           <li><a href="#">Компания</a></li>
-          <li><a href="/catalog.html">Каталог</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
           <li><a href="#">Новости</a></li>
           <li><a href="#">Спецпредложения</a></li>
           <li><a href="#">Доставка</a></li>
@@ -72,7 +72,7 @@
             <img src="img/first-slider-1.jpg" width="620px" height="266px" alt="Дрели">
             <button class="slide-btn-next" type="button">Следующий слайд</button>
             <button class="slide-btn-back" type="button">Предыдущий слайд</button>
-            <a href="/catalog.html">Открыть каталог</a>
+            <a href="catalog.html">Открыть каталог</a>
           </li>
           <li class="second-slide">
             <b>Перфораторы</b>
@@ -80,7 +80,7 @@
             <img src="img/second-slider-2.jpg" width="620px" height="266px" alt="Перфораторы">
             <button class="slide-btn-next">Следующий слайд</button>
             <button class="slide-btn-back">Предыдущий слайд</button>
-            <a href="/catalog.html">Открыть каталог</a>
+            <a href="catalog.html">Открыть каталог</a>
           </li>
         </ul> 
       </section>
@@ -131,43 +131,43 @@
         </div>
         <ul class="popular-manufactures-list">
           <li class="popular-manufactures-item">
-            <a href="#">
+            <a href="#" aria-label="Переход на страницу Bosch">
               <img src="img/bosch.png" width="126" height="37" alt="Bosch">
             </a>
           </li>
           <li class="popular-manufactures-item">
-            <a href="#">
+            <a href="#" aria-label="Переход на страницу Makita">
               <img src="img/makita.png" width="123" height="40" alt="Makita">
             </a>
           </li>
           <li class="popular-manufactures-item">
-            <a href="#">
+            <a href="#" aria-label="Переход на страницу DeWalt">
               <img src="img/de-walt.png" width="146" height="44" alt="DeWalt">
             </a>
           </li>
           <li class="popular-manufactures-item">
-            <a href="#">
+            <a href="#" aria-label="Переход на страницу Интерскол">
               <img src="img/interskol.png" width="200 height="88" alt="Интерскол">
             </a>
           </li>
           <li class="popular-manufactures-item">
-            <a href="#">
+            <a href="#" aria-label="Переход на страницу Hitachi">
               <img src="img/hitachi.png" width="169" height="31" alt="Hitachi">
             </a>
           </li>
           <li class="popular-manufactures-item">
-            <a href="#">
+            <a href="#" aria-label="Переход на страницу Lg">
               <img src="img/lg.png" width="121" height="73" alt="LG">
             </a>
           </li>
           <li class="popular-manufactures-item">
-            <a href="#">
+            <a href="#" aria-label="Переход на страницу Aeg">
              <img src="img/aeg.png" width="151 height="96" alt="AEG">
             </a>
           </li>
           <li class="popular-manufactures-item">
-            <a href="#">
-              <img src="img/metabo.png" width="204" height="69" alt="metabo">
+            <a href="#" aria-label="Переход на страницу Metabo">
+              <img src="img/metabo.png" width="204" height="69" alt="Metabo">
             </a>
           </li>
         </ul>
@@ -206,7 +206,7 @@
               Залезть в долговую яму стало проще! 
               Кредитные консультанты придут вам на помощь.
             </p>  
-            <a href="#">Отправить заявку</a><!--ТУТ СЛУЧАЕМ НЕ НАДО ФОРМУ ВМЕСТО ССЫЛКИ?-->
+            <a href="#">Отправить заявку</a>
           </li>
         </ul>
       </section>
@@ -238,7 +238,7 @@
         <ul class="site-navigation">
           <li><a href="#">Компания</a></li>
           <li><a href="#">Новости</a></li>
-          <li><a href="/catalog.html">Каталог</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
@@ -267,7 +267,8 @@
       <p class="site-developer">Разработано — <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
     </footer>
     <section class="modal-feedback">
-      <form>
+      <h2 class="vissually-hidden">Напишите нам!</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
         <label for="login-field">Ваше имя:</label>
         <input type="text" name="login" id="login-field" placeholder="Имя Фамилия">
         <label for="e-mail-field">Ваш e-mail:</label>
@@ -279,6 +280,7 @@
       <button type="button" class="modal-close">Закрыть</button>
     </section>
     <section class="modal-map">
+      <h2 class="vissually-hidden">Карта</h2>
       <img src="img/map.jpg" alt="г.Санкт-Петербург,ул.Б.Конюшенная,д.19/8" width="940px" height="446px">
       <button type="button" class="modal-close">Закрыть</button>
     </section>

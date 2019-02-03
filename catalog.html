@@ -7,8 +7,8 @@
   <body>
     <header class="main-header">
       <div class="header-first-lvl">
-        <a href="/index.html" class="header-logo">Логотип Техномарта</a>  
-        <form>
+        <a href="index.html" class="header-logo">Логотип Техномарта</a>  
+        <form action="https://echo.htmlacademy.ru" method="get">
           <input type="search" name="search" class="search" placeholder="Поиск">
         </form>
         <a href="#" class="bookmarks">Закладки:0</a>
@@ -23,15 +23,16 @@
           <a href="#" class="header-telephone">+7(812)555-05-55</a>
           <address class="header-address">г.Санкт-Петербург,ул.Б.Конюшенная,д.19/8</address>
         </div>
-        <p>
-          <span class="user-name"><a href="#">Равшан Джамшутович</a> <a href="#">Деавторизация</a></span> 
+        <div class="user-name">
+          <a href="#">Равшан Джамшутович</a>
+          <a href="#">Деавторизация</a>
+        </div> 
           <a href="#" class="orders">Мои заказы</a>
           <a href="#" class="personal-account">Личный кабинет</a>
-        </p>
       </div>
       <nav class="main-navigation">
         <ul class="site-nagigation">
-          <li><a href="/index.html">Главная</a></li>
+          <li><a href="index.html">Главная</a></li>
           <li><a href="#">Компания</a></li>
           <li><a href="#">Каталог</a></li>
           <li><a href="#">Новости</a></li>
@@ -44,15 +45,15 @@
     <main>
       <section>
       <ul class="breadcrumbs">
-        <li><a href="/index.html">Главная</a></li>
-        <li><a href="/catalog.html">Каталог</a></li>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
         <li><a href="#">Инструмент</a></li>
         <li><a href="#">Перфораторы</a></li>
       </ul>
       <h2>Перфораторы</h2>  
       <section class="filters">
         <h3>Фильтр:</h3> 
-        <form>
+        <form action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="price-filter">
             <legend>Цена:</legend>
               <input type="range" min="0" max="30000" name="price">
@@ -60,10 +61,10 @@
           </fieldset>   
           <fieldset class="company-filter">
             <legend>Производители:</legend>
-              <input type="checkbox" name="BOSCH" id="filter-Interskol" checked> 
-              <label for="filter-BOSCH">Bosch</label>
+              <input type="checkbox" name="Bosch" id="filter-Bosch" checked> 
+              <label for="filter-Bosch">Bosch</label>
               <input type="checkbox" name="Interskol" id="filter-Interskol"> 
-              <label for="filter-INTERSKOL">Интерскол</label>
+              <label for="filter-Interskol">Интерскол</label>
               <input type="checkbox" name="Makita" id="filter-Makita" checked> 
               <label for="filter-Makita">Makita</label>
               <input type="checkbox" name="Dewalt" id="filter-Dewalt"> 
@@ -73,9 +74,9 @@
           </fieldset>
           <fieldset class="charge-filter">
             <legend>Питание:</legend>
-              <input type="radio" name="accumulator" id="filter-accumulator" checked> 
+              <input type="radio" name="charge" id="filter-accumulator" checked> 
               <label for="filter-accumulator">Аккумуляторные</label>
-              <input type="radio" name="line-supply" id="filter-line-supply" > 
+              <input type="radio" name="charge" id="filter-line-supply" > 
               <label for="filter-line-supply">Сетевые</label>
           </fieldset>
           <button type="submit" value="Показать"></button>
@@ -84,13 +85,13 @@
       <section class="assortment">
         <h3>Сортировка:</h3>
         <ul class="assortment-list">
-          <li class="active">По цене</li>  
-          <li>По типу</li>  
-          <li>По функционалу</li>  
+          <li class="active"><a href="#">По цене</a></li>  
+          <li><a href="#">По типу</a></li>  
+          <li><a href="#">По функционалу</a></li>  
         </ul>
         <ul>
-          <li>От большего к меньшему</li>
-          <li>От меньшего к большему</li>
+          <li><a href="#">От большего к меньшему</a></li>
+          <li><a href="#">От меньшего к большему</a></li>
         </ul>
       </section>
       <section class="first-column">
@@ -200,7 +201,7 @@
         <ul class="site-navigation">
           <li><a href="#">Компания</a></li>
           <li><a href="#">Новости</a></li>
-          <li><a href="/catalog.html">Каталог</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
@@ -229,9 +230,10 @@
     <p class="site-developer">Разработано - <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
     </footer>
     <section class="modal-added-in-basket">
+      <h3 class="vissually-hidden">Товар добавлен в корзину</h3>
       <p>Товар добавлен в корзину!</p>
       <a href="#">Оформить заказ</a>
-      <a href="/catalog.html">Продолжить покупки</a>
+      <a href="catalog.html">Продолжить покупки</a>
     </section>
   </body>
 </html>
