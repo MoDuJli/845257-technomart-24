@@ -1,54 +1,54 @@
 @font-face {
     font-family: "Cuprum";
     src: local("Cuprum"),
-         url(Cuprum.woff) format("woff"),
-         url(Cuprum.woff2) format("woff2");
-    font-weight: normal;
+         url(Cuprum.woff2) format("woff2"),
+         url(Cuprum.woff) format("woff");
+    font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Cuprum";
     src: local("Cuprum"),
-         url(Cuprum.woff) format("woff"),
-         url(Cuprum.woff2) format("woff2");
-    font-weight: bold;
+         url(Cuprumbold.woff2) format("woff2"),
+         url(Cuprumbold.woff) format("woff");
+    font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Cuprum";
     src: local("Cuprum"),
-         url(Cuprum.woff) format("woff"),
-         url(Cuprum.woff2) format("woff2");
-    font-weight: normal;
+         url(Cuprumitalic.woff2) format("woff2"),
+         url(Cuprumitalic.woff) format("woff");
+    font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Cuprum";
     src: local("Cuprum"),
-         url(Cuprum.woff) format("woff"),
-         url(Cuprum.woff2) format("woff2");
-    font-weight: bold;
+         url(Cuprumbolditalic.woff2) format("woff2"),
+         url(Cuprumbolditalic.woff) format("woff");
+    font-weight: 700;
     font-style: italic;
 }
 
 @font-face {
     font-family: "PT Sans";
     src: local("PT Sans"),
-         url(Ptsans.woff) format("woff"),
-         url(Ptsans.woff2) format("woff2");
-    font-weight: normal;
+         url(Ptsans.woff2) format("woff2"),
+         url(Ptsans.woff) format("woff");
+    font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "PT Sans";
     src: local("PT Sans"),
-         url(Ptsans.woff) format("woff"),
-         url(Ptsans.woff2) format("woff2");
-    font-weight: bold;
+         url(Ptsansbold.woff2) format("woff2"),
+         url(Ptsansbold.woff) format("woff");
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -56,7 +56,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Cuprum", Arial, sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-weight: normal;
 }
 
@@ -77,11 +77,15 @@ a {
     line-height: 18px;
 }
 
-.logo:hover {
+.logo {
+    background-color: #ee3643;
+}
+
+.header-logo:hover {
     fill: #ca2c37;
 }
 
-.logo:active {
+.header-logo:active {
     fill: #ba2732;
 }
 
@@ -221,7 +225,7 @@ a {
 }
 
 .filters {
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
 }
 
 .filters h3 {
@@ -255,7 +259,7 @@ a {
 
 .assortment {
     background-color: #f7f3ec;
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
 }
 
 .assortment-list {
@@ -326,6 +330,26 @@ a {
     list-style: none;
 }
 
+.advantage-item:first-child {
+    background-color: #ffbf47;
+}
+
+.advantage-item:nth-child(2) {
+    background-color: #3bbce3;
+}
+
+.advantage-item:nth-child(3) {
+    background-color: #dc91d8;
+}
+
+.advantage-item:nth-child(4) {
+    background-color: #8ed78f;
+}
+
+.advantage-item:nth-child(5) {
+    background-color: #ffc047;
+}
+
 .advantage-item h3{
     font-weight: bold;
     font-size: 24px;
@@ -372,11 +396,11 @@ a {
     text-transform: uppercase;
 }
 
-.first-slider .button:hover {
+.button:hover {
     background-color: #ca2c37;
 }
 
-.first-slider .button:active {
+.button:active {
     background-color: #ba2732;
 }
 
@@ -392,11 +416,16 @@ a {
 }
 
 .popular-item {
-    font-family: "PTSans" , Arial, sans-serif;
+    font-family: "PTSans" , "Arial", sans-serif;
 }
 
 .popular-item:hover img{
     display: none;
+}
+
+.popular-item:hover .to-buy,
+.popular-item:hover .add-to-bookmarks{
+    display: block;
 }
 
 .to-buy {
@@ -476,7 +505,7 @@ a {
 }
 
 .services p {
-    font-family: "PTSans" , Arial, sans-serif;
+    font-family: "PTSans" , "Arial", sans-serif;
     font-size: 13px;
     line-height: 24px;
     color: #000000;
@@ -514,7 +543,7 @@ a {
 }
 
 .our-benefits {
-    font-family: "PTSans", Arial, sans-serif;
+    font-family: "PTSans", "Arial", sans-serif;
     color: #000000;
     font-size: 13px;
     line-height: 24px;
@@ -534,7 +563,7 @@ a {
 }
 
 .contacts p {
-    font-family: "PTSans", Arial, sans-serif;
+    font-family: "PTSans", "Arial", sans-serif;
     color: #000000;
     font-size: 13px;
     line-height: 24px;
