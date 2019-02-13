@@ -52,6 +52,13 @@
     font-style: normal;
 }
 
+html { 
+    box-sizing: border-box; 
+} 
+
+*, *::before, *::after { 
+    box-sizing: inherit; 
+}
 
 body {
     margin: 0;
@@ -67,7 +74,23 @@ a {
 }
 
 .main-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
+.header-background-1 {
+    background-color: #293449;
+}
+
+.header-background-2 {
     background-color: #f4f7f9;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 960px;
+    padding: 0 10px;
 }
 
 .header-first-lvl {
@@ -75,10 +98,16 @@ a {
     color: #ffffff;
     font-size: 17px;
     line-height: 18px;
+    display: flex;
 }
 
 .logo {
     background-color: #ee3643;
+}
+
+.header-logo {
+    width: 220px;
+    height: 42px;
 }
 
 .header-logo:hover {
@@ -91,6 +120,7 @@ a {
 
 .search {
     font-family: inherit;
+    background-color: #293449;
 }
 
 .search:hover {
@@ -104,6 +134,10 @@ a {
 
 .make-an-order {
     background-color: #63a63e;
+    width: 150px;
+    height: 42px;
+    padding: 13px 21px;
+    margin-left: auto;
 }
 
 .make-an-order:hover {
@@ -128,17 +162,38 @@ a {
     background-color: #161d29;
 }
 
+.header-second-lvl {
+    display: flex;
+    justify-content: space-between;
+}
+
 .header-second-lvl h1 {
     color: #ee3643;
     font-size: 16px;
     line-height: 23px;
     font-style: italic;
+    width: 196px;
+    margin-top: 48px;
+    margin-bottom: 44px;
+    margin-left: 53px;
+    margin-right: 70px;
 }
+
+/*Дичь с шириной текста,не понимаю*/
+
 
 .header-telephone {
     color: #ee3643;
     font-size: 21px;
     line-height: 21px;
+    background-color: transparent;
+    border: 3px solid #ffffff;
+    margin-top: 46px;
+    width: 270px;
+    height: 45px;
+    padding: 12px;
+    padding-right: 45px;
+    padding-left: 75px;
 }
 
 .header-address {
@@ -149,17 +204,21 @@ a {
 
 .user-buttons {
     list-style: none;
-    background-color: #ffffff;
     color: #000000;
     font-size: 21px;
     line-height: 21px;
 }
 
-.user-buttons:hover {
+.user-buttons li {
+    background-color: #ffffff;
+
+}
+
+.user-buttons li:hover {
     color: #ee3643;
 }
 
-.user-buttons:active {
+.user-buttons li:active {
     color: rgba(0, 0, 0, 0.3);
 }
 
@@ -197,13 +256,23 @@ a {
     color: #ffffff;
     font-size: 17px;
     line-height: 17px;
+    display: flex;
+    min-height: 60px;
+    margin-bottom: 60px;
 }
 
-.site-navigation li:hover {
+.main-navigation li {
+    width: 127px;
+    padding: 31px;
+    padding-top: 22px;
+    padding-bottom: 25px;
+}
+
+.main-navigation li:hover {
     color: #32425c;
 }
 
-.site-navigation li:active {
+.main-navigation li:active {
     color: #1d2739;
 }
 
@@ -319,6 +388,12 @@ a {
     background-color: #ee3643;
 }
 
+.wrapper {
+    width: 960px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
 .advantages {
     text-transform: uppercase;
     color: #ffffff;
@@ -326,27 +401,40 @@ a {
     line-height: 18px;
 }
 
-.advantage-list {
+.advantages-list {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 
-.advantage-item:first-child {
-    background-color: #ffbf47;
-}
-
-.advantage-item:nth-child(2) {
-    background-color: #3bbce3;
+.advantage-item{
+    width: 300px;
+    min-height: 123px;
+    margin-right: 20px;
 }
 
 .advantage-item:nth-child(3) {
+    margin: 0;
+}
+
+.goods {
+    background-color: #ffbf47;
+}
+
+.instruments {
+    background-color: #3bbce3;
+}
+
+.equipment {
     background-color: #dc91d8;
 }
 
-.advantage-item:nth-child(4) {
+.discounts {
     background-color: #8ed78f;
 }
 
-.advantage-item:nth-child(5) {
+.delivery {
     background-color: #ffc047;
 }
 
