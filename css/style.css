@@ -1,8 +1,8 @@
 @font-face {
     font-family: "Cuprum";
     src: local("Cuprum"),
-         url(Cuprum.woff2) format("woff2"),
-         url(Cuprum.woff) format("woff");
+         url(../fonts/Cuprum.woff2) format("woff2"),
+         url(../fonts/Cuprum.woff) format("woff");
     font-weight: 400;
     font-style: normal;
 }
@@ -10,8 +10,8 @@
 @font-face {
     font-family: "Cuprum";
     src: local("Cuprum"),
-         url(Cuprumbold.woff2) format("woff2"),
-         url(Cuprumbold.woff) format("woff");
+         url(../fonts/Cuprumbold.woff2) format("woff2"),
+         url(../fonts/Cuprumbold.woff) format("woff");
     font-weight: 700;
     font-style: normal;
 }
@@ -19,8 +19,8 @@
 @font-face {
     font-family: "Cuprum";
     src: local("Cuprum"),
-         url(Cuprumitalic.woff2) format("woff2"),
-         url(Cuprumitalic.woff) format("woff");
+         url(../fonts/Cuprumitalic.woff2) format("woff2"),
+         url(../fonts/Cuprumitalic.woff) format("woff");
     font-weight: 400;
     font-style: italic;
 }
@@ -28,26 +28,26 @@
 @font-face {
     font-family: "Cuprum";
     src: local("Cuprum"),
-         url(Cuprumbolditalic.woff2) format("woff2"),
-         url(Cuprumbolditalic.woff) format("woff");
+         url(../fonts/Cuprumbolditalic.woff2) format("woff2"),
+         url(../fonts/Cuprumbolditalic.woff) format("woff");
     font-weight: 700;
     font-style: italic;
 }
 
 @font-face {
-    font-family: "PT Sans";
-    src: local("PT Sans"),
-         url(Ptsans.woff2) format("woff2"),
-         url(Ptsans.woff) format("woff");
+    font-family: "PTSans";
+    src: local("PTSans"),
+         url(../fonts/Ptsans.woff2) format("woff2"),
+         url(../fonts/Ptsans.woff) format("woff");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "PT Sans";
-    src: local("PT Sans"),
-         url(Ptsansbold.woff2) format("woff2"),
-         url(Ptsansbold.woff) format("woff");
+    font-family: "PTSans";
+    src: local("PTSans"),
+         url(../fonts/Ptsansbold.woff2) format("woff2"),
+         url(../fonts/Ptsansbold.woff) format("woff");
     font-weight: 700;
     font-style: normal;
 }
@@ -76,7 +76,6 @@ a {
 .main-header {
     display: flex;
     flex-direction: column;
-    margin-bottom: 60px;
 }
 
 .header-background-1 {
@@ -108,6 +107,7 @@ a {
 .header-logo {
     width: 220px;
     height: 42px;
+    padding: 14px 55px;
 }
 
 .header-logo:hover {
@@ -121,6 +121,11 @@ a {
 .search {
     font-family: inherit;
     background-color: #293449;
+    border: 0px;
+    width: 270px;
+    height: 42px;
+    padding: 15px;
+    padding-left: 50px;
 }
 
 .search:hover {
@@ -148,8 +153,26 @@ a {
     background-color: #518534;
 }
 
+.basket {
+    display: block;
+    width: 150px;
+    min-height: 42px;
+    padding: 13px;
+    padding-left: 50px;
+    padding-right: 29px;
+}
+
 .basket-active {
     background-color: #ee3643;
+}
+
+.bookmarks {
+    display: block;
+    width: 150px;
+    min-height: 42px;
+    padding: 13px;
+    padding-left: 43px;
+    padding-right: 28px;
 }
 
 .bookmarks:hover,
@@ -164,7 +187,16 @@ a {
 
 .header-second-lvl {
     display: flex;
-    justify-content: space-between;
+
+}
+
+.h1-container {
+    width: 196px;
+    min-height: 60px;
+    margin-right: 70px;
+    margin-left: 53px;
+    margin-top: 54px;
+    margin-bottom: 44px;
 }
 
 .header-second-lvl h1 {
@@ -172,15 +204,14 @@ a {
     font-size: 16px;
     line-height: 23px;
     font-style: italic;
-    width: 196px;
-    margin-top: 48px;
-    margin-bottom: 44px;
-    margin-left: 53px;
-    margin-right: 70px;
 }
 
-/*Дичь с шириной текста,не понимаю*/
-
+.header-contacts {
+    margin-top: 46px;
+    border: 1px solid black;
+    margin-bottom: 44px;
+    align-self: center;
+}
 
 .header-telephone {
     color: #ee3643;
@@ -188,10 +219,9 @@ a {
     line-height: 21px;
     background-color: transparent;
     border: 3px solid #ffffff;
-    margin-top: 46px;
     width: 270px;
-    height: 45px;
-    padding: 12px;
+    min-height: 45px;
+    padding: 11px;
     padding-right: 45px;
     padding-left: 75px;
 }
@@ -204,21 +234,34 @@ a {
 
 .user-buttons {
     list-style: none;
-    color: #000000;
     font-size: 21px;
     line-height: 21px;
 }
 
-.user-buttons li {
-    background-color: #ffffff;
-
+.user-buttons a {
+    background: transparent;
+    color: #000000;
 }
 
-.user-buttons li:hover {
+.user-buttons li {
+    background-color: #ffffff;
+    min-height: 45px;
+    margin-top: 46px;
+}
+
+.to-log-in {
+    width: 120px;  
+}
+
+.to-sign-in {
+    width: 150px;
+}
+
+.user-buttons a:hover {
     color: #ee3643;
 }
 
-.user-buttons li:active {
+.user-buttons a:active {
     color: rgba(0, 0, 0, 0.3);
 }
 
@@ -250,29 +293,37 @@ a {
     color: rgba(50, 66, 92, 0.3);
 }
 
+
 .main-navigation {
-    list-style: none;
-    background-color: #32425c;
-    color: #ffffff;
-    font-size: 17px;
-    line-height: 17px;
-    display: flex;
-    min-height: 60px;
+    margin: 0;
     margin-bottom: 60px;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
 }
 
 .main-navigation li {
-    width: 127px;
-    padding: 31px;
-    padding-top: 22px;
-    padding-bottom: 25px;
+    min-height: 60px;
+    padding: 23px 31px;
+    flex-grow: 1;
+    background-color: #32425c;
 }
 
-.main-navigation li:hover {
+.main-navigation li:first-child {
+    padding-left: 51px;
+    padding-right: 34px;
+}
+
+.main-navigation li:last-child {
+    padding-right: 55px;
+    padding-left: 34px;
+}
+
+.main-navigation a:hover {
     color: #32425c;
 }
 
-.main-navigation li:active {
+.main-navigation a:active {
     color: #1d2739;
 }
 
@@ -388,12 +439,6 @@ a {
     background-color: #ee3643;
 }
 
-.wrapper {
-    width: 960px;
-    padding: 0 10px;
-    margin: 0 auto;
-}
-
 .advantages {
     text-transform: uppercase;
     color: #ffffff;
@@ -404,7 +449,7 @@ a {
 .advantages-list {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: no-wrap;
     
 }
 
@@ -412,10 +457,6 @@ a {
     width: 300px;
     min-height: 123px;
     margin-right: 20px;
-}
-
-.advantage-item:nth-child(3) {
-    margin: 0;
 }
 
 .goods {
@@ -428,6 +469,7 @@ a {
 
 .equipment {
     background-color: #dc91d8;
+    margin-right: 0;
 }
 
 .discounts {
