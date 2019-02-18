@@ -23,12 +23,10 @@
       </div>
       <div class="header-background-2">
         <div class="wrapper">
-          <div class="header-second-lvl">
-            <div class="h1-container">
-              <h1>
-                Интернет-магазин строительных материалов и инструментов для ремонта
-              </h1>
-            </div>
+          <div class="header-second-lvl">           
+            <h1>
+               Интернет-магазин строительных материалов и инструментов для ремонта
+            </h1>
             <div class="header-contacts">
               <a href="#" class="header-telephone">+7(812)555-05-55</a>
               <address class="header-address">г.Санкт-Петербург,ул.Б.Конюшенная,д.19/8</address>
@@ -57,6 +55,7 @@
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества</h2>     
           <ul class="advantages-list">
+            <div class="advantages-first-lvl">
             <li class="advantage-item goods new">          
               <h3>Материалы</h3>
               <a href="catalog/goods.html">на любой вкус</a>             
@@ -69,37 +68,48 @@
               <h3>Техника</h3>
               <a href="catalog/equipment.html">для стройки</a>                 
             </li>
-            <li class="advantage-item discounts">               
-              <h3>Скидки 50%</h3>
-              <a href="catalog/discounts.html">на 350 товаров</a>           
+            </div>
+            <div class="advantages-second-lvl">
+              <div class="flex-wrapper">
+              <li class="advantage-item discounts">               
+                <h3>Скидки 50%</h3>
+                <a href="catalog/discounts.html">на 350 товаров</a>           
+              </li>
+              <li class="advantage-item delivery">
+                <h3>Доставка</h3>
+                <a href="catalog/delivery.html">бесплатно</a> 
+              </li>
+              </div>
+            <li class="top-slider">
+              <input class="slide-btn-next visually-hidden" type="radio" id="slide-next" name="slide-btn"  checked>
+              <input class="slide-btn-back visually-hidden" type="radio" id="slide-back" name="slide-btn">
+              <label for="slide-next" class="button-second">Следующий слайд</label>
+              <label for="slide-back" class="button-first">Предыдущий слайд</label>
+              <label for="slide-next" class="radio-second">Следующий слайд</label>
+              <label for="slide-back" class="radio-first">Предыдущий слайд</label>
+              <ul class="first-slider"> 
+                <li class="slide-item" id="slide1">
+                  <b>Дрели</b>
+                  <span>Соседям на радость!</span>
+                  <img src="img/first-slider-1.jpg" width="620px" height="266px" alt="Дрели">
+                  <a href="catalog.html" class="button">Открыть каталог</a>
+                </li>
+                <li class="slide-item" id="slide2">
+                  <b>Перфораторы</b>
+                  <span>Настоящие мужские игрушки</span>
+                  <img src="img/first-slider-2.jpg" width="620px" height="266px" alt="Перфораторы">
+                  <a href="catalog.html" class="button">Открыть каталог</a>
+                </li>
+              </ul>
             </li>
-            <li class="advantage-item delivery">
-              <h3>Доставка</h3>
-              <a href="catalog/delivery.html">бесплатно</a> 
-            </li>
+            </div>
           </ul>
-        <ul class="first-slider"> 
-          <li class="first-slide">
-            <b>Перфораторы</b>
-            <span>Соседям на радость!</span>
-            <img src="img/first-slider-1.jpg" width="620px" height="266px" alt="Дрели">
-            <button class="slide-btn-next" type="button">Следующий слайд</button>
-            <button class="slide-btn-back" type="button">Предыдущий слайд</button>
-            <a href="catalog.html" class="button">Открыть каталог</a>
-          </li>
-          <li class="second-slide">
-            <b>Перфораторы</b>
-            <span>Настоящие мужские игрушки</span>
-            <img src="img/second-slider-2.jpg" width="620px" height="266px" alt="Перфораторы">
-            <button class="slide-btn-next">Следующий слайд</button>
-            <button class="slide-btn-back">Предыдущий слайд</button>
-            <a href="catalog.html" class="button">Открыть каталог</a>
-          </li>
-        </ul> 
+      </div>
       </section>
       </div>
+      <div class="wrapper">
       <section class="popular-items">
-        <div>
+        <div class="gray-block">
           <h2>Популярные товары:</h2>
           <a href="#" class="button">Все популярные товары</a>
         </div>
@@ -110,8 +120,8 @@
               <span class="to-buy"><a href="#">Купить</a></span>
               <span class="add-to-bookmarks"><a href="#">В закладки</a></span>
               <h3 class="popular-item-name"><a href="#">Перфоратор BOSCH BFG 9000</a></h3>
-              <span class="old-price">32500Р.</span>
-              <span class="current-price">25500Р.</span>
+              <span class="old-price">32500 Р.</span>
+              <span class="current-price">25500 Р.</span>
             </article>
           </li>
           <li>
@@ -120,8 +130,8 @@
                 <span class="to-buy"><a href="#">Купить</a></span>
                 <span class="add-to-bookmarks"><a href="#">В закладки</a></span>
                 <h3 class="popular-item-name"><a href="#">Перфоратор BOSCH BFG 3000</a></h3>
-                <span class="old-price">32500Р.</span>
-                <span class="current-price">25500Р.</span>
+                <span class="old-price">22500 Р.</span>
+                <span class="current-price">15500 Р.</span>
               </article>
           </li>
           <li>
@@ -130,8 +140,8 @@
                 <span class="to-buy"><a href="#">Купить</a></span>
                 <span class="add-to-bookmarks"><a href="#">В закладки</a></span>
                 <h3 class="popular-item-name"><a href="#">Перфоратор BOSCH BFG 6000</a></h3>
-                <span class="old-price">32500Р.</span>
-                <span class="current-price">25500Р.</span>
+                <span class="old-price">30500 Р.</span>
+                <span class="current-price">25500 Р.</span>
               </article>
           </li>
           <li>
@@ -140,14 +150,14 @@
                 <span class="to-buy"><a href="#">Купить</a></span>
                 <span class="add-to-bookmarks"><a href="#">В закладки</a></span>
                 <h3 class="popular-item-name"><a href="#">Перфоратор BOSCH BFG 2000</a></h3>
-                <span class="old-price">32500Р.</span>
-                <span class="current-price">25500Р.</span>
+                <span class="old-price">32500 Р.</span>
+                <span class="current-price">25500 Р.</span>
                </article>
           </li>
         </ul>
       </section>
       <section class="popular-manufactures">
-        <div>
+        <div class="gray-block">
           <h2>Популярные производители:</h2>
           <a href="#" class="button">Все производители</a>
         </div>
@@ -194,13 +204,17 @@
           </li>
         </ul>
       </section>
-      
+    </div>
+    <div class="services-background">
+    <div class="wrapper">
       <section class="services">
-        <h2>Сервисы</h2>
-        <p>
-          Хороший интернет-магазин отличается от плохого не только ценами!
-          Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-        </p>
+        <div class="top-block">
+          <h2>Сервисы</h2>
+          <p>
+            Хороший интернет-магазин отличается от плохого не только ценами!
+            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+          </p>
+        </div>
         <ul class="second-slider">
           <li class="delivery current-slide">
             <h2>Доставка</h2>
@@ -233,6 +247,8 @@
           </li>
         </ul>
       </section>
+    </div>
+    </div>
       <section class="about-us">
         <h2>Компания «Техномарт»</h2>
         <div class="our-benefits">

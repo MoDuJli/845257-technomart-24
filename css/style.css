@@ -73,6 +73,14 @@ a {
     background-color: #293449;
 }
 
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
 .main-header {
     display: flex;
     flex-direction: column;
@@ -84,6 +92,7 @@ a {
 
 .header-background-2 {
     background-color: #f4f7f9;
+    padding-bottom: 60px;
 }
 
 .wrapper {
@@ -107,7 +116,7 @@ a {
 .header-logo {
     width: 220px;
     height: 42px;
-    padding: 14px 55px;
+    padding: 12px 55px;
 }
 
 .header-logo:hover {
@@ -141,7 +150,8 @@ a {
     background-color: #63a63e;
     width: 150px;
     height: 42px;
-    padding: 13px 21px;
+    padding: 12px 21px;
+    padding-bottom: 15px;
     margin-left: auto;
 }
 
@@ -156,7 +166,7 @@ a {
 .basket {
     display: block;
     width: 150px;
-    min-height: 42px;
+    height: 42px;
     padding: 13px;
     padding-left: 50px;
     padding-right: 29px;
@@ -169,7 +179,7 @@ a {
 .bookmarks {
     display: block;
     width: 150px;
-    min-height: 42px;
+    height: 42px;
     padding: 13px;
     padding-left: 43px;
     padding-right: 28px;
@@ -186,34 +196,38 @@ a {
 }
 
 .header-second-lvl {
+    padding: 0;
+    margin: 0;
     display: flex;
-
-}
-
-.h1-container {
-    width: 196px;
-    min-height: 60px;
-    margin-right: 70px;
-    margin-left: 53px;
-    margin-top: 54px;
-    margin-bottom: 44px;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 1px solid black;
+    padding: 45px 0;
 }
 
 .header-second-lvl h1 {
+    margin: 0;
+    padding: 0;
     color: #ee3643;
     font-size: 16px;
     line-height: 23px;
     font-style: italic;
+    width: 250px;
+    min-height: 60px;
+    padding-left: 50px;
+    border: 1px solid black;
 }
 
 .header-contacts {
-    margin-top: 46px;
+    margin: 0;
+    padding: 0;
+    width: 270px;
     border: 1px solid black;
-    margin-bottom: 44px;
-    align-self: center;
 }
 
 .header-telephone {
+    margin: 0;
+    padding: 0;
     color: #ee3643;
     font-size: 21px;
     line-height: 21px;
@@ -221,21 +235,25 @@ a {
     border: 3px solid #ffffff;
     width: 270px;
     min-height: 45px;
-    padding: 11px;
-    padding-right: 45px;
-    padding-left: 75px;
 }
 
 .header-address {
+    margin: 0;
+    padding: 0;
     color: #32425c;
     font-size: 14px;
     line-height: 24px;
 }
 
 .user-buttons {
+    margin: 0;
+    padding: 0;
     list-style: none;
     font-size: 21px;
     line-height: 21px;
+    width: 300px;
+    display: flex;
+    border: 1px solid black;
 }
 
 .user-buttons a {
@@ -246,15 +264,22 @@ a {
 .user-buttons li {
     background-color: #ffffff;
     min-height: 45px;
-    margin-top: 46px;
 }
 
 .to-log-in {
-    width: 120px;  
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+    padding: 15px;
+    padding-right: 27px;
+    padding-left: 48px;
+
 }
 
 .to-sign-in {
-    width: 150px;
+    margin: 0;
+    padding: 0;
+    padding: 14px 25px;
 }
 
 .user-buttons a:hover {
@@ -296,7 +321,6 @@ a {
 
 .main-navigation {
     margin: 0;
-    margin-bottom: 60px;
     padding: 0;
     list-style-type: none;
     display: flex;
@@ -447,64 +471,106 @@ a {
 }
 
 .advantages-list {
-    list-style: none;
-    display: flex;
-    flex-wrap: no-wrap;
-    
+    margin: 0;
+    padding: 0;
+    list-style: none;   
 }
 
 .advantage-item{
     width: 300px;
     min-height: 123px;
-    margin-right: 20px;
+    position: relative;
+}
+
+.advantages-first-lvl {
+    padding-top: 60px;
+    width: 940px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.advantages-second-lvl {
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .goods {
     background-color: #ffbf47;
+    background-image: url("../img/icon-1.svg");
+    background-repeat: no-repeat;
+    background-position: 213px 31px;
 }
 
 .instruments {
     background-color: #3bbce3;
+    background-image: url("../img/icon-2.svg");
+    background-repeat: no-repeat;
+    background-position: 197px 33px;
 }
 
 .equipment {
     background-color: #dc91d8;
-    margin-right: 0;
+    background-image: url("../img/icon-3.svg");
+    background-repeat: no-repeat;
+    background-position: 191px 31px;
 }
 
 .discounts {
     background-color: #8ed78f;
+    background-image: url("../img/icon-4.svg");
+    background-repeat: no-repeat;
+    background-position: 196px 26px;
 }
 
 .delivery {
     background-color: #ffc047;
+    background-image: url("../img/icon-5.svg");
+    background-repeat: no-repeat;
+    background-position: 191px 32px;
 }
 
 .advantage-item h3{
     font-weight: bold;
+    text-transform: none;
     font-size: 24px;
     line-height: 30px;
+    position: absolute;
+    top: -3px;
+    left: 23px;   /*ТУТ Я НЕМНОГО НЕ ПОНЯЛ.Я ЗАДАЛ ТОЛЬКО КООРДИНАТУ СЛЕВА,А СВЕРХУ/СНИЗУ НЕ ЗАДАВАЛ,
+    НО НЕСМОТРЯ НА ЭТО ОН СПОЗИЦИОНИРОВАЛСЯ ПРАКТИЧЕСКИ ПРАВИЛЬНО,В ЧЕМ ПРИКОЛ??*/
+    /*Все-таки пришлось задать -3px,чтобы было ровно.Непонятная хрень какая-та.
+    Относительно чего он блин позиционируется?*/
 }
 
 .advantage-item a {
     font-size: 14px;
     line-height: 18px;
-    color: #000000;
-    opacity: 0.1;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 22px;
+    left: 25px;
+    width: 135px;
+    height: 38px;
+    padding-bottom: 14px;
+    padding-top: 12px;
+    text-align: center;
 }
 
 .advantage-item a:hover {
-    color: #000000;
-    opacity: 0.2;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .advantage-item a:active {
-    color: #000000;
-    opacity: 0.3;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .first-slider {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .first-slider b {
@@ -518,43 +584,241 @@ a {
     text-transform: none;
 }
 
-.button {
-    background-color: #ee3643;
-    font-size: 14px;
-    line-height: 18px;
-    color: #ffffff;
-    text-transform: uppercase;
+.top-slider {
+    width: 620px;
+    position: relative;
 }
 
-.button:hover {
-    background-color: #ca2c37;
+.top-slider .radio-first,
+.top-slider .radio-second {
+    position: absolute;
+    z-index: 3;
+    bottom: 36px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 0;
+    background-color: white;
 }
 
-.button:active {
-    background-color: #ba2732;
+.radio-first {
+    left: 295px;
 }
 
-.popular-items div {
+.radio-second {
+    left: 315px;
+}
+
+#slide2 {
+    display: none;
+}
+
+#slide-back:checked ~ #slide1 {
+    display: block;
+}
+
+#slide-back:checked ~ #slide2 {
+    display: none;
+}
+
+#slide-next:checked ~ #slide2 {
+    display: block;
+}
+
+#slide-next:checked ~ #slide1 {
+    display: none;
+}
+
+#slide-next:checked ~ label.radio-second,
+#slide-back:checked ~ label.radio-first {
+    z-index: 15;
+    background-color: red;
+}
+
+.slide-item {
+    position: relative;
+    height: 266px;
+}
+
+.slide-item b,
+.slide-item span {
+    position: absolute;
+    left: 24px;
+}
+
+.slide-item b {
+    top: 26px;
+}
+
+.slide-item span {
+    top: 64px;
+}
+
+.slide-item a {
+    position: absolute;
+    bottom: 22px;
+    left: 25px;
+    display: block;
+    width: 195px;
+    height: 38px;
+    padding: 47px;
+    padding-bottom: 16px;
+    padding-top: 12px;
+}
+
+label[for="slide-next"].button-second {
+    width: 22px;
+    height: 40px;
+    font-size: 0px;
+    background-image: url("../img/icon-right.svg");
+    background-repeat: no-repeat;  
+    position: absolute;
+    top: 114px;
+    right: 20px;
+    z-index: 5;
+}
+
+label[for="slide-back"].button-first {
+    font-size: 0px;
+    width: 22px;
+    height: 40px;
+    background-image: url("../img/icon-left.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 114px;
+    left: 25px;
+    z-index: 5;
+}
+
+.advantages-second-lvl {
+    margin-top: 20px;
+}
+
+.flex-wrapper {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-wrapper .discounts {
+    margin-bottom: 20px;
+}
+
+.popular-items {
+    margin-top: 53px;
+}
+
+.gray-block {
     background-color: #f9f5f0;
+    min-height: 89px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.popular-items h2 {
+.gray-block a {
+    width: 253px;
+    min-height: 38px;
+    text-align: center;
+    line-height: 38px;
+    margin-right: 24px;
+
+}
+
+.gray-block h2 {
     font-size: 30px;
     line-height: 30px;
     color: #32425c;
     text-transform: uppercase;
+    padding-left: 25px;
+}
+
+.popular-item-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    margin-top: 20px;
 }
 
 .popular-item {
     font-family: "PTSans" , "Arial", sans-serif;
+    width: 220px;
+    min-height: 318px;
+    border: 1px solid #e5e5e5;
+    margin-right: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.popular-item:nth-child(4n) {
+    margin-right: 0;
+}
+
+.popular-item img {
+    min-height: 170px;
+    width: 218px;
+}
+
+.popular-item.new img {
+    padding-left: 15px;
+}
+
+.popular-item.new .old-price{
+    visibility: hidden;
+}
+
+.to-buy,
+.add-to-bookmarks {
+    display: none;
+}
+
+.popular-item h3 {
+    width: 175px;
+    min-height: 33px;
+    margin: 0 auto;
+    margin-top: 6px;
+}
+
+.popular-item-name a {
+    background-color: transparent;
+    color: #000000;
+}
+
+.popular-item .current-price {
+    display: block;
+    width: 122px;
+    min-height: 38px;
+    padding: 11px 0;
+    padding-left: 13px;
+    text-align: center;
+    position: relative;
+    margin-left: 43px;
+    margin-right: 41px;
+    margin-bottom: 20px;
+}
+
+.popular-item .current-price::after {
+    content: "";
+    width: 27px;
+    height: 27px;
+    background-color: #ee3643;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 7px;
+    left: 109px;
 }
 
 .popular-item:hover img{
-    display: none;
+    visibility: hidden;
 }
 
 .popular-item:hover .to-buy,
 .popular-item:hover .add-to-bookmarks{
+    position: absolute;
+    left: 41px;
+
     display: block;
 }
 
@@ -593,11 +857,6 @@ a {
     color: rgba(50, 66, 92, 0.3);
 }
 
-
-.popular-item-list {
-    list-style: none;
-}
-
 .popular-item h3 {
     color: #000000;
     font-size: 18px;
@@ -609,6 +868,10 @@ a {
     line-height: 18px;
     color: #a9a9a9;
     text-decoration: line-through;
+    font-weight: bold;
+    margin-bottom: 9px;
+    margin-top: 11px;
+    display: block;
 }
 
 .current-price {
@@ -616,6 +879,7 @@ a {
     font-size: 17px;
     line-height: 18px;
     color: #ffffff;
+    font-weight: bold;
 }
 
 .popular-manufactures > div {
@@ -628,21 +892,83 @@ a {
 
 .popular-manufactures-list {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.popular-manufactures {
+    padding-top: 21px;
+}
+
+.popular-manufactures-item a{
+    background: transparent;
+}
+
+.popular-manufactures-item {
+    width: 220px;
+    min-height: 145px;
+    border: 1px solid #eaeaea;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.popular-manufactures-item a {
+    display: flex;
+    min-height: 145px;
+    justify-content: center;
+    align-items: center;
+}
+
+.popular-manufactures-item:nth-child(4n) {
+    margin-right: 0px;
+}
+
+.services-background {
+    background-color: #f4f7f9;
 }
 
 .services {
     background-color: #f4f7f9;
+    margin-top: 65px;
 }
 
-.services p {
+.top-block {
+    width: 400px;
+    height: 100px;
+    padding-top: 68px;
+}
+
+.top-block h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: left;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.top-block p {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
     font-family: "PTSans" , "Arial", sans-serif;
     font-size: 13px;
     line-height: 24px;
+    text-align: left;
     color: #000000;
 }
 
 .second-slider {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 70px;
 }
 
 .second-slider li{
@@ -658,18 +984,11 @@ a {
     background-color: #293449;
 }
 
-.services h2 {
+.about-us h2 {
     color: #ffffff;
     font-size: 21px;
     line-height: 30px;
     font-weight: bold;
-}
-
-.about-us h2{
-    color: #000000;
-    text-transform: uppercase;
-    font-size: 30px;
-    line-height: 30px;
 }
 
 .our-benefits {
@@ -777,6 +1096,23 @@ footer ul {
 .feedback a:active,
 .site-developer a:active {
    color: #ee3643;
+}
+
+.button {
+    background-color: #ee3643;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+.button:hover {
+    background-color: #ca2c37;
+}
+
+.button:active {
+    background-color: #ba2732;
 }
 
 .modal-feedback,
