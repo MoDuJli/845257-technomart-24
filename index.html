@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link href="css/normilize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/min-style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -15,7 +15,8 @@
               <img src="img/logo-technomart.svg" alt="Логотип Техномарта" class="logo header-logo" width="111" height="38">
             </a>
             <form action="https://echo.htmlacademy.ru" method="get" class="search-block">
-              <input type="search" name="search" class="search" placeholder="Поиск:">
+              <label for="header-search" class="visually-hidden">Поиск по сайту</label>
+              <input type="search" name="search" id="header-search" class="search" placeholder="Поиск:">
               <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"><path d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/></svg>
             </form>
             <div class="bookmarks-block">
@@ -23,7 +24,7 @@
               <svg class="bookmarks-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path d="M14 15c0 .55-.368.741-.818.426l-5.363-3.765c-.45-.315-1.187-.315-1.637 0L.818 15.426C.368 15.741 0 15.55 0 15V1c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v14z"/></svg>
             </div>
             <div class="basket-block">
-              <a href="#" class="basket basket-active">Корзина: 0</a>
+              <a href="#" class="basket">Корзина: 0</a>
               <svg class="basket-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><circle cx="4.5" cy="13.5" r="1.5"/><circle cx="12.5" cy="13.5" r="1.5"/><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/></svg>
             </div>
             <a href="#" class="make-an-order">Оформить заказ</a>
@@ -87,8 +88,7 @@
           <h2 class="visually-hidden">Преимущества</h2>     
             <div class="advantages-list">
               <div class="advantages-first-lvl">
-                <article class="advantage-item goods">   
-                  <div class="new"></div>       
+                <article class="advantage-item goods new">        
                   <h3>Материалы</h3>
                   <a href="catalog/goods.html">на любой вкус</a>             
                 </article>
@@ -141,8 +141,12 @@
       <div class="wrapper">
       <section class="popular-items">
         <div class="gray-block">
-          <h2>Популярные товары:</h2>
-          <a href="#" class="button">Все популярные товары</a>
+          <div class="h2-wrapper">
+            <h2>Популярные товары:</h2>
+          </div>
+          <div class="link-wrapper">
+            <a href="#" class="button">Все популярные товары</a>
+          </div>
         </div>
         <ul class="popular-item-list">
           <li class="popular-item">
@@ -158,7 +162,10 @@
           <li class="popular-item">
             <img src="img/perforator-3000.jpg" alt="Перфоратор BOSCH BFG 3000" class="popular-item-photo" width="218" height="170">
             <div class="popular-item-hover">
-              <a href="catalog-popup.html" class="to-buy">Купить</a>
+              <div class="to-buy-block">
+                <a href="catalog-popup.html" class="to-buy">Купить</a>
+                <svg class="basket-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><circle cx="4.5" cy="13.5" r="1.5"/><circle cx="12.5" cy="13.5" r="1.5"/><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/></svg>
+              </div>
               <a href="#" class="add-to-bookmarks">В закладки</a>
             </div>
             <h3 class="popular-item-name"><a href="#">Перфоратор BOSCH BFG 3000</a></h3>
@@ -168,18 +175,23 @@
           <li class="popular-item">
             <img src="img/perforator-6000.jpg" alt="Перфоратор BOSCH BFG 6000" class="popular-item-photo" width="218" height="170">
             <div class="popular-item-hover">
-              <a href="catalog-popup.html" class="to-buy">Купить</a>
+              <div class="to-buy-block">
+                <a href="catalog-popup.html" class="to-buy">Купить</a>
+                <svg class="basket-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><circle cx="4.5" cy="13.5" r="1.5"/><circle cx="12.5" cy="13.5" r="1.5"/><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/></svg>
+              </div>
               <a href="#" class="add-to-bookmarks">В закладки</a>
             </div>
             <h3 class="popular-item-name"><a href="#">Перфоратор BOSCH BFG 6000</a></h3>
             <span class="old-price">30500 Р.</span>
             <span class="current-price">25500 Р.</span>    
           </li>
-          <li class="popular-item">
-            <div class="new"></div>
+          <li class="popular-item new">
             <img src="img/perforator-2000.jpg" alt="Перфоратор BOSCH BFG 2000" class="popular-item-photo" width="218" height="170">
             <div class="popular-item-hover">
-              <a href="catalog-popup.html" class="to-buy">Купить</a>
+              <div class="to-buy-block">
+                <a href="catalog-popup.html" class="to-buy">Купить</a>
+                <svg class="basket-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><circle cx="4.5" cy="13.5" r="1.5"/><circle cx="12.5" cy="13.5" r="1.5"/><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/></svg>
+              </div>
               <a href="#" class="add-to-bookmarks">В закладки</a>
             </div>
             <h3 class="popular-item-name"><a href="#">Перфоратор BOSCH BFG 2000</a></h3>
@@ -190,48 +202,52 @@
       </section>
       <section class="popular-manufactures">
         <div class="gray-block">
-          <h2>Популярные производители:</h2>
-          <a href="#" class="button">Все производители</a>
+          <div class="h2-wrapper">
+            <h2>Популярные производители:</h2>
+          </div>
+          <div class="link-wrapper">
+            <a href="#" class="button">Все производители</a>
+          </div>
         </div>
         <ul class="popular-manufactures-list">
           <li class="popular-manufactures-item popular-manufactures-item-1">
             <a href="#" aria-label="Переход на страницу Bosch">
-              <img src="img/bosch.png" width="126" height="37" alt="Bosch">
+              <img src="img/bosch.jpg" width="126" height="37" alt="Bosch">
             </a>
           </li>
           <li class="popular-manufactures-item popular-manufactures-item-2">
             <a href="#" aria-label="Переход на страницу Makita">
-              <img src="img/makita.png" width="123" height="40" alt="Makita">
+              <img src="img/makita.jpg" width="123" height="40" alt="Makita">
             </a>
           </li>
           <li class="popular-manufactures-item popular-manufactures-item-3">
             <a href="#" aria-label="Переход на страницу DeWalt">
-              <img src="img/de-walt.png" width="146" height="44" alt="DeWalt">
+              <img src="img/de-walt.jpg" width="146" height="44" alt="DeWalt">
             </a>
           </li>
           <li class="popular-manufactures-item popular-manufactures-item-4">
             <a href="#" aria-label="Переход на страницу Интерскол">
-              <img src="img/interskol.png" width="200" height="88" alt="Интерскол">
+              <img src="img/interskol.jpg" width="200" height="88" alt="Интерскол">
             </a>
           </li>
           <li class="popular-manufactures-item popular-manufactures-item-5">
             <a href="#" aria-label="Переход на страницу Hitachi">
-              <img src="img/hitachi.png" width="169" height="31" alt="Hitachi">
+              <img src="img/hitachi.jpg" width="169" height="31" alt="Hitachi">
             </a>
           </li>
           <li class="popular-manufactures-item popular-manufactures-item-6">
             <a href="#" aria-label="Переход на страницу Lg">
-              <img src="img/lg.png" width="121" height="73" alt="LG">
+              <img src="img/lg.jpg" width="121" height="73" alt="LG">
             </a>
           </li>
           <li class="popular-manufactures-item popular-manufactures-item-7">
             <a href="#" aria-label="Переход на страницу Aeg">
-             <img src="img/aeg.png" width="151" height="96" alt="AEG">
+             <img src="img/aeg.jpg" width="151" height="96" alt="AEG">
             </a>
           </li>
           <li class="popular-manufactures-item popular-manufactures-item-8">
             <a href="#" aria-label="Переход на страницу Metabo">
-              <img src="img/metabo.png" width="204" height="69" alt="Metabo">
+              <img src="img/metabo.jpg" width="204" height="69" alt="Metabo">
             </a>
           </li>
         </ul>
@@ -320,7 +336,7 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="main-footer">
       <div class="footer-background-1">
         <div class="wrapper">
           <div class="footer-first-lvl">
@@ -369,15 +385,15 @@
       <form action="https://echo.htmlacademy.ru" method="post">
         <div class="input-container">
           <div class="login-container">
-            <label for="login-field">Ваше имя:</label><br>
+            <label for="login-field">Ваше имя:</label>
             <input type="text" name="login" id="login-field" placeholder="Имя Фамилия">
           </div>
           <div class="e-mail-container">
-            <label for="e-mail-field">Ваш e-mail:</label><br>
+            <label for="e-mail-field">Ваш e-mail:</label>
             <input type="email" name="e-mail" id="e-mail-field" placeholder="email@example.com">
           </div>
           <div class="letter-container">
-            <label for="letter-field">Текст письма:</label><br>
+            <label for="letter-field">Текст письма:</label>
             <textarea name="letter" id="letter-field" placeholder="В свободной форме"></textarea>
           </div>
         </div>
@@ -392,6 +408,6 @@
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1551715445884" width="940" height="446" style="border:0" allowfullscreen></iframe>
       <button type="button" class="modal-close">Закрыть</button>
     </section>
-    <script src="js/script.js"></script>
+    <script src="js/min-script.js"></script>
   </body>
 </html>

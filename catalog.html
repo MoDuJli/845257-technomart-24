@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Каталог товаров в Техномарте</title>
     <link href="css/normilize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/min-style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -23,7 +23,7 @@
               <svg class="bookmarks-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path d="M14 15c0 .55-.368.741-.818.426l-5.363-3.765c-.45-.315-1.187-.315-1.637 0L.818 15.426C.368 15.741 0 15.55 0 15V1c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v14z"/></svg>
             </div>
             <div class="basket-block">
-              <a href="#" class="basket basket-active">Корзина: 0</a>
+              <a href="#" class="basket basket-active">Корзина: 10</a>
               <svg class="basket-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><circle cx="4.5" cy="13.5" r="1.5"/><circle cx="12.5" cy="13.5" r="1.5"/><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/></svg>
             </div>
             <a href="#" class="make-an-order">Оформить заказ</a>
@@ -32,7 +32,7 @@
       </div>
       <div class="header-background-2">
         <div class="wrapper">
-          <div class="header-second-lvl">           
+          <div class="header-second-lvl catalog-header-second-lvl">           
             <h1>
                Интернет-магазин строительных материалов<br> и инструментов для ремонта
             </h1>
@@ -90,7 +90,9 @@
           <li><a href="#">Перфораторы</a></li>
         </ul>
         <div class="gray-block">
-          <h2>Перфораторы</h2>  
+          <div class="h2-wrapper">
+            <h2>Перфораторы</h2>
+          </div>  
         </div>
         <div class="catalog-flex-wrapper">
           <section class="filters">
@@ -100,15 +102,21 @@
             <form action="https://echo.htmlacademy.ru" method="post">
               <fieldset class="price-filter">
                 <legend>Цена:</legend>
-                <div  class="range-price">
-                  <input type="range" min="0" max="30000" name="price">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="range-toggle range-toggle-min"></div>
+                  <div class="range-toggle range-toggle-max"></div>
                 </div>
                 <div class="price-flex-container">
                   <div class="min-price">
-                    <input type="text" value="0" name="min-price">
+                    <label for="min-price" class="visually-hidden">Выставьте минимальную цену</label>
+                    <input type="text" value="0" name="min-price" id="min-price">
                   </div>
                   <div class="max-price"> 
-                    <input type="text" value="30000" name="max-price">
+                    <label for="max-price" class="visually-hidden">Выставьте максимальную цену</label>
+                    <input type="text" value="30000" name="max-price" id="max-price">
                   </div>
                 </div>
               </fieldset>   
@@ -207,12 +215,14 @@
               </ul>
             </section>
             <div class="goods-wrapper">
-              <div class="goods-first-column">
                 <ul class="popular-item-list">
                   <li class="popular-item">
                     <img src="img/perforator-3000.jpg" alt="Перфоратор BOSCH BFG 3000" class="popular-item-photo" width="218" height="170">
                     <div class="popular-item-hover">
-                      <a href="catalog-popup.html" class="to-buy modal-link">Купить</a>
+                      <div class="to-buy-block">
+                        <a href="catalog-popup.html" class="to-buy modal-link">Купить</a>
+                        <svg class="basket-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><circle cx="4.5" cy="13.5" r="1.5"/><circle cx="12.5" cy="13.5" r="1.5"/><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/></svg>
+                      </div>
                       <a href="#" class="add-to-bookmarks">В закладки</a>
                     </div>
                     <h3 class="popular-item-name"><a href="#">Перфоратор BOSCH BFG 3000</a></h3>
@@ -222,18 +232,23 @@
                   <li class="popular-item">
                     <img src="img/perforator-6000.jpg" alt="Перфоратор BOSCH BFG 6000" class="popular-item-photo" width="218" height="170">
                     <div class="popular-item-hover">
-                      <a href="catalog-popup.html" class="to-buy modal-link">Купить</a>
+                      <div class="to-buy-block">
+                        <a href="catalog-popup.html" class="to-buy modal-link">Купить</a>
+                        <svg class="basket-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><circle cx="4.5" cy="13.5" r="1.5"/><circle cx="12.5" cy="13.5" r="1.5"/><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/></svg>
+                      </div>
                       <a href="#" class="add-to-bookmarks">В закладки</a>
                     </div>
                     <h3 class="popular-item-name"><a href="#">Перфоратор BOSCH BFG 6000</a></h3>
                       <span class="old-price">30500Р.</span>
                     <span class="current-price">25500Р.</span>
                   </li>
-                  <li class="popular-item">
-                    <div class="new"></div>
+                  <li class="popular-item new">
                     <img src="img/perforator-2000.jpg" alt="Перфоратор BOSCH BFG 2000" class="popular-item-photo" width="218" height="170">
                     <div class="popular-item-hover">
-                      <a href="catalog-popup.html" class="to-buy modal-link">Купить</a>
+                      <div class="to-buy-block">
+                        <a href="catalog-popup.html" class="to-buy modal-link">Купить</a>
+                        <svg class="basket-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><circle cx="4.5" cy="13.5" r="1.5"/><circle cx="12.5" cy="13.5" r="1.5"/><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/></svg>
+                      </div>
                       <a href="#" class="add-to-bookmarks">В закладки</a>
                     </div>
                     <h3 class="popular-item-name"><a href="#">Перфоратор BOSCH BFG 2000</a></h3>
@@ -241,24 +256,27 @@
                     <span class="current-price">12500Р.</span>
                   </li>
                 </ul>
-              </div>
-              <div class="goods-second-column">
                 <ul class="popular-item-list">
                   <li class="popular-item">
                     <img src="img/perforator-3000.jpg" alt="Перфоратор BOSCH BFG 3000" class="popular-item-photo" width="218" height="170">
                     <div class="popular-item-hover">
-                      <a href="catalog-popup.html" class="to-buy modal-link">Купить</a>
+                      <div class="to-buy-block">
+                        <a href="catalog-popup.html" class="to-buy modal-link">Купить</a>
+                        <svg class="basket-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><circle cx="4.5" cy="13.5" r="1.5"/><circle cx="12.5" cy="13.5" r="1.5"/><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/></svg>
+                      </div>
                       <a href="#" class="add-to-bookmarks">В закладки</a>
                     </div>
                     <h3 class="popular-item-name"><a href="#">Перфоратор BOSCH BFG 3000</a></h3>
                     <span class="old-price">22500Р.</span>
                     <span class="current-price">15500Р.</span>
                   </li>
-                  <li class="popular-item">
-                    <div class="new"></div>
+                  <li class="popular-item new">
                     <img src="img/perforator-6000.jpg" alt="Перфоратор BOSCH BFG 6000" class="popular-item-photo" width="218" height="170">
                     <div class="popular-item-hover">
-                      <a href="catalog-popup.html" class="to-buy modal-link">Купить</a>
+                      <div class="to-buy-block">
+                        <a href="catalog-popup.html" class="to-buy modal-link">Купить</a>
+                        <svg class="basket-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><circle cx="4.5" cy="13.5" r="1.5"/><circle cx="12.5" cy="13.5" r="1.5"/><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/></svg>
+                      </div>
                       <a href="#" class="add-to-bookmarks">В закладки</a>
                     </div>
                     <h3 class="popular-item-name"><a href="#">Перфоратор BOSCH BFG 6000</a></h3>
@@ -268,7 +286,10 @@
                   <li class="popular-item">
                     <img src="img/perforator-2000.jpg" alt="Перфоратор BOSCH BFG 2000" class="popular-item-photo" width="218" height="170">
                     <div class="popular-item-hover">
-                      <a href="catalog-popup.html" class="to-buy modal-link">Купить</a>
+                      <div class="to-buy-block">
+                        <a href="catalog-popup.html" class="to-buy modal-link">Купить</a>
+                        <svg class="basket-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><circle cx="4.5" cy="13.5" r="1.5"/><circle cx="12.5" cy="13.5" r="1.5"/><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/></svg>
+                      </div>
                       <a href="#" class="add-to-bookmarks">В закладки</a>
                     </div>
                     <h3 class="popular-item-name"><a href="#">Перфоратор BOSCH BFG 2000</a></h3>
@@ -276,14 +297,14 @@
                     <span class="current-price">12500Р.</span>
                   </li>
                 </ul>
-              </div>
-              <div class="goods-third-column">
                 <ul class="popular-item-list">
-                  <li class="popular-item">
-                    <div class="new"></div>
+                  <li class="popular-item new">
                     <img src="img/perforator-3000.jpg" alt="Перфоратор BOSCH BFG 3000" class="popular-item-photo" width="218" height="170">
                     <div class="popular-item-hover">
-                      <a href="catalog-popup.html" class="to-buy modal-link">Купить</a>
+                      <div class="to-buy-block">
+                        <a href="catalog-popup.html" class="to-buy modal-link">Купить</a>
+                        <svg class="basket-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><circle cx="4.5" cy="13.5" r="1.5"/><circle cx="12.5" cy="13.5" r="1.5"/><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/></svg>
+                      </div>
                       <a href="#" class="add-to-bookmarks">В закладки</a>
                     </div>
                     <h3 class="popular-item-name"><a href="#">Перфоратор BOSCH BFG 3000</a></h3>
@@ -293,7 +314,10 @@
                   <li class="popular-item">
                     <img src="img/perforator-6000.jpg" alt="Перфоратор BOSCH BFG 6000" class="popular-item-photo" width="218" height="170">
                     <div class="popular-item-hover">
-                      <a href="catalog-popup.html" class="to-buy modal-link">Купить</a>
+                      <div class="to-buy-block">
+                        <a href="catalog-popup.html" class="to-buy modal-link">Купить</a>
+                        <svg class="basket-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><circle cx="4.5" cy="13.5" r="1.5"/><circle cx="12.5" cy="13.5" r="1.5"/><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/></svg>
+                      </div>
                       <a href="#" class="add-to-bookmarks">В закладки</a>
                     </div>
                     <h3 class="popular-item-name"><a href="#">Перфоратор BOSCH BFG 6000</a></h3>
@@ -303,7 +327,10 @@
                   <li class="popular-item">
                     <img src="img/perforator-2000.jpg" alt="Перфоратор BOSCH BFG 2000" class="popular-item-photo" width="218" height="170">
                     <div class="popular-item-hover">
-                      <a href="catalog-popup.html" class="to-buy modal-link">Купить</a>
+                      <div class="to-buy-block">
+                        <a href="catalog-popup.html" class="to-buy modal-link">Купить</a>
+                        <svg class="basket-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><circle cx="4.5" cy="13.5" r="1.5"/><circle cx="12.5" cy="13.5" r="1.5"/><path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/></svg>
+                      </div>
                       <a href="#" class="add-to-bookmarks">В закладки</a>
                     </div>
                     <h3 class="popular-item-name"><a href="#">Перфоратор BOSCH BFG 2000</a></h3>
@@ -311,7 +338,6 @@
                     <span class="current-price">12500Р.</span>
                   </li>
                 </ul>
-              </div>   
             </div>
             <div class="paginator">
               <ul class="paginator-pages">
@@ -338,7 +364,7 @@
         </div>
       </div>
     </main>
-    <footer class="catalog-footer">
+    <footer class="main-footer catalog-footer">
       <div class="footer-background-1">
         <div class="wrapper">
           <div class="footer-first-lvl">
@@ -391,6 +417,6 @@
       </div>
       <button type="button" class="modal-close">Закрыть</button>
     </section>
-    <script src="js/script.js"></script>
+    <script src="js/min-script.js"></script>
   </body>
 </html>
